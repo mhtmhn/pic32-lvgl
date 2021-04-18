@@ -170,6 +170,541 @@
         </logicalFolder>
       </logicalFolder>
     </logicalFolder>
+    <logicalFolder name="f1" displayName="LVGL 7.11.0" projectFiles="true">
+      <logicalFolder name="lv_examples" displayName="lv_examples" projectFiles="true">
+        <logicalFolder name="src" displayName="src" projectFiles="true">
+          <logicalFolder name="assets" displayName="assets" projectFiles="true">
+            <itemPath>../../../lv_examples/src/assets/img_cogwheel_alpha16.c</itemPath>
+            <itemPath>../../../lv_examples/src/assets/img_cogwheel_argb.c</itemPath>
+            <itemPath>../../../lv_examples/src/assets/img_cogwheel_chroma_keyed.c</itemPath>
+            <itemPath>../../../lv_examples/src/assets/img_cogwheel_indexed16.c</itemPath>
+            <itemPath>../../../lv_examples/src/assets/img_cogwheel_rgb.c</itemPath>
+            <itemPath>../../../lv_examples/src/assets/img_hand.c</itemPath>
+            <itemPath>../../../lv_examples/src/assets/lv_font_montserrat_12_compr_az.c</itemPath>
+            <itemPath>../../../lv_examples/src/assets/lv_font_montserrat_16_compr_az.c</itemPath>
+            <itemPath>../../../lv_examples/src/assets/lv_font_montserrat_28_compr_az.c</itemPath>
+          </logicalFolder>
+          <logicalFolder name="lv_demo_benchmark"
+                         displayName="lv_demo_benchmark"
+                         projectFiles="true">
+            <itemPath>../../../lv_examples/src/lv_demo_benchmark/lv_demo_benchmark.c</itemPath>
+            <itemPath>../../../lv_examples/src/lv_demo_benchmark/lv_demo_benchmark.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="lv_demo_keypad_encoder"
+                         displayName="lv_demo_keypad_encoder"
+                         projectFiles="true">
+            <itemPath>../../../lv_examples/src/lv_demo_keypad_encoder/lv_demo_keypad_encoder.c</itemPath>
+            <itemPath>../../../lv_examples/src/lv_demo_keypad_encoder/lv_demo_keypad_encoder.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="lv_demo_music"
+                         displayName="lv_demo_music"
+                         projectFiles="true">
+            <logicalFolder name="assets" displayName="assets" projectFiles="true">
+              <logicalFolder name="__pycache__" displayName="__pycache__" projectFiles="true">
+              </logicalFolder>
+              <itemPath>../../../lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_pause.c</itemPath>
+              <itemPath>../../../lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_play.c</itemPath>
+              <itemPath>../../../lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_loop.c</itemPath>
+              <itemPath>../../../lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_next.c</itemPath>
+              <itemPath>../../../lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_pause.c</itemPath>
+              <itemPath>../../../lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_play.c</itemPath>
+              <itemPath>../../../lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_prev.c</itemPath>
+              <itemPath>../../../lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_rnd.c</itemPath>
+              <itemPath>../../../lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_left.c</itemPath>
+              <itemPath>../../../lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_right.c</itemPath>
+              <itemPath>../../../lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_1.c</itemPath>
+              <itemPath>../../../lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_2.c</itemPath>
+              <itemPath>../../../lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_3.c</itemPath>
+              <itemPath>../../../lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_1.c</itemPath>
+              <itemPath>../../../lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_2.c</itemPath>
+              <itemPath>../../../lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_3.c</itemPath>
+              <itemPath>../../../lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_4.c</itemPath>
+              <itemPath>../../../lv_examples/src/lv_demo_music/assets/img_lv_demo_music_list_border.c</itemPath>
+              <itemPath>../../../lv_examples/src/lv_demo_music/assets/img_lv_demo_music_logo.c</itemPath>
+              <itemPath>../../../lv_examples/src/lv_demo_music/assets/img_lv_demo_music_slider_knob.c</itemPath>
+              <itemPath>../../../lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_bottom.c</itemPath>
+              <itemPath>../../../lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top.c</itemPath>
+              <itemPath>../../../lv_examples/src/lv_demo_music/assets/lv_demo_music_font_16_bold.c</itemPath>
+              <itemPath>../../../lv_examples/src/lv_demo_music/assets/spectrum_1.h</itemPath>
+              <itemPath>../../../lv_examples/src/lv_demo_music/assets/spectrum_2.h</itemPath>
+              <itemPath>../../../lv_examples/src/lv_demo_music/assets/spectrum_3.h</itemPath>
+            </logicalFolder>
+            <itemPath>../../../lv_examples/src/lv_demo_music/lv_demo_music.c</itemPath>
+            <itemPath>../../../lv_examples/src/lv_demo_music/lv_demo_music.h</itemPath>
+            <itemPath>../../../lv_examples/src/lv_demo_music/lv_demo_music_list.c</itemPath>
+            <itemPath>../../../lv_examples/src/lv_demo_music/lv_demo_music_list.h</itemPath>
+            <itemPath>../../../lv_examples/src/lv_demo_music/lv_demo_music_main.c</itemPath>
+            <itemPath>../../../lv_examples/src/lv_demo_music/lv_demo_music_main.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="lv_demo_printer"
+                         displayName="lv_demo_printer"
+                         projectFiles="true">
+            <logicalFolder name="images" displayName="images" projectFiles="true">
+              <itemPath>../../../lv_examples/src/lv_demo_printer/images/lv_demo_printer_icon_bright.c</itemPath>
+              <itemPath>../../../lv_examples/src/lv_demo_printer/images/lv_demo_printer_icon_eco.c</itemPath>
+              <itemPath>../../../lv_examples/src/lv_demo_printer/images/lv_demo_printer_icon_hue.c</itemPath>
+              <itemPath>../../../lv_examples/src/lv_demo_printer/images/lv_demo_printer_icon_pc.c</itemPath>
+              <itemPath>../../../lv_examples/src/lv_demo_printer/images/lv_demo_printer_icon_tel.c</itemPath>
+              <itemPath>../../../lv_examples/src/lv_demo_printer/images/lv_demo_printer_icon_wifi.c</itemPath>
+              <itemPath>../../../lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_btn_bg_1.c</itemPath>
+              <itemPath>../../../lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_btn_bg_2.c</itemPath>
+              <itemPath>../../../lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_btn_bg_3.c</itemPath>
+              <itemPath>../../../lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_btn_bg_4.c</itemPath>
+              <itemPath>../../../lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_cloud.c</itemPath>
+              <itemPath>../../../lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_copy.c</itemPath>
+              <itemPath>../../../lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_internet.c</itemPath>
+              <itemPath>../../../lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_mobile.c</itemPath>
+              <itemPath>../../../lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_no_internet.c</itemPath>
+              <itemPath>../../../lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_phone.c</itemPath>
+              <itemPath>../../../lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_print.c</itemPath>
+              <itemPath>../../../lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_printer2.c</itemPath>
+              <itemPath>../../../lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_ready.c</itemPath>
+              <itemPath>../../../lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_scan.c</itemPath>
+              <itemPath>../../../lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_scan_example.c</itemPath>
+              <itemPath>../../../lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_setup.c</itemPath>
+              <itemPath>../../../lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_usb.c</itemPath>
+              <itemPath>../../../lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_wave.c</itemPath>
+            </logicalFolder>
+            <itemPath>../../../lv_examples/src/lv_demo_printer/lv_demo_printer.c</itemPath>
+            <itemPath>../../../lv_examples/src/lv_demo_printer/lv_demo_printer.h</itemPath>
+            <itemPath>../../../lv_examples/src/lv_demo_printer/lv_demo_printer_theme.c</itemPath>
+            <itemPath>../../../lv_examples/src/lv_demo_printer/lv_demo_printer_theme.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="lv_demo_stress"
+                         displayName="lv_demo_stress"
+                         projectFiles="true">
+            <itemPath>../../../lv_examples/src/lv_demo_stress/lv_demo_stress.c</itemPath>
+            <itemPath>../../../lv_examples/src/lv_demo_stress/lv_demo_stress.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="lv_demo_widgets"
+                         displayName="lv_demo_widgets"
+                         projectFiles="true">
+            <itemPath>../../../lv_examples/src/lv_demo_widgets/lv_demo_widgets.c</itemPath>
+            <itemPath>../../../lv_examples/src/lv_demo_widgets/lv_demo_widgets.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="lv_ex_get_started"
+                         displayName="lv_ex_get_started"
+                         projectFiles="true">
+            <itemPath>../../../lv_examples/src/lv_ex_get_started/lv_ex_get_started.h</itemPath>
+            <itemPath>../../../lv_examples/src/lv_ex_get_started/lv_ex_get_started_1.c</itemPath>
+            <itemPath>../../../lv_examples/src/lv_ex_get_started/lv_ex_get_started_2.c</itemPath>
+            <itemPath>../../../lv_examples/src/lv_ex_get_started/lv_ex_get_started_3.c</itemPath>
+          </logicalFolder>
+          <logicalFolder name="lv_ex_style" displayName="lv_ex_style" projectFiles="true">
+            <itemPath>../../../lv_examples/src/lv_ex_style/lv_ex_style.h</itemPath>
+            <itemPath>../../../lv_examples/src/lv_ex_style/lv_ex_style_1.c</itemPath>
+            <itemPath>../../../lv_examples/src/lv_ex_style/lv_ex_style_10.c</itemPath>
+            <itemPath>../../../lv_examples/src/lv_ex_style/lv_ex_style_11.c</itemPath>
+            <itemPath>../../../lv_examples/src/lv_ex_style/lv_ex_style_2.c</itemPath>
+            <itemPath>../../../lv_examples/src/lv_ex_style/lv_ex_style_3.c</itemPath>
+            <itemPath>../../../lv_examples/src/lv_ex_style/lv_ex_style_4.c</itemPath>
+            <itemPath>../../../lv_examples/src/lv_ex_style/lv_ex_style_5.c</itemPath>
+            <itemPath>../../../lv_examples/src/lv_ex_style/lv_ex_style_6.c</itemPath>
+            <itemPath>../../../lv_examples/src/lv_ex_style/lv_ex_style_7.c</itemPath>
+            <itemPath>../../../lv_examples/src/lv_ex_style/lv_ex_style_8.c</itemPath>
+            <itemPath>../../../lv_examples/src/lv_ex_style/lv_ex_style_9.c</itemPath>
+          </logicalFolder>
+          <logicalFolder name="lv_ex_widgets"
+                         displayName="lv_ex_widgets"
+                         projectFiles="true">
+            <logicalFolder name="lv_ex_arc" displayName="lv_ex_arc" projectFiles="true">
+              <itemPath>../../../lv_examples/src/lv_ex_widgets/lv_ex_arc/lv_ex_arc_1.c</itemPath>
+              <itemPath>../../../lv_examples/src/lv_ex_widgets/lv_ex_arc/lv_ex_arc_2.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="lv_ex_bar" displayName="lv_ex_bar" projectFiles="true">
+              <itemPath>../../../lv_examples/src/lv_ex_widgets/lv_ex_bar/lv_ex_bar_1.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="lv_ex_btn" displayName="lv_ex_btn" projectFiles="true">
+              <itemPath>../../../lv_examples/src/lv_ex_widgets/lv_ex_btn/lv_ex_btn_1.c</itemPath>
+              <itemPath>../../../lv_examples/src/lv_ex_widgets/lv_ex_btn/lv_ex_btn_2.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="lv_ex_btnmatrix"
+                           displayName="lv_ex_btnmatrix"
+                           projectFiles="true">
+              <itemPath>../../../lv_examples/src/lv_ex_widgets/lv_ex_btnmatrix/lv_ex_btnmatrix_1.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="lv_ex_calendar"
+                           displayName="lv_ex_calendar"
+                           projectFiles="true">
+              <itemPath>../../../lv_examples/src/lv_ex_widgets/lv_ex_calendar/lv_ex_calendar_1.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="lv_ex_canvas"
+                           displayName="lv_ex_canvas"
+                           projectFiles="true">
+              <itemPath>../../../lv_examples/src/lv_ex_widgets/lv_ex_canvas/lv_ex_canvas_1.c</itemPath>
+              <itemPath>../../../lv_examples/src/lv_ex_widgets/lv_ex_canvas/lv_ex_canvas_2.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="lv_ex_chart" displayName="lv_ex_chart" projectFiles="true">
+              <itemPath>../../../lv_examples/src/lv_ex_widgets/lv_ex_chart/lv_ex_chart_1.c</itemPath>
+              <itemPath>../../../lv_examples/src/lv_ex_widgets/lv_ex_chart/lv_ex_chart_2.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="lv_ex_checkbox"
+                           displayName="lv_ex_checkbox"
+                           projectFiles="true">
+              <itemPath>../../../lv_examples/src/lv_ex_widgets/lv_ex_checkbox/lv_ex_checkbox_1.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="lv_ex_cont" displayName="lv_ex_cont" projectFiles="true">
+              <itemPath>../../../lv_examples/src/lv_ex_widgets/lv_ex_cont/lv_ex_cont_1.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="lv_ex_cpicker"
+                           displayName="lv_ex_cpicker"
+                           projectFiles="true">
+              <itemPath>../../../lv_examples/src/lv_ex_widgets/lv_ex_cpicker/lv_ex_cpicker_1.c</itemPath>
+              <itemPath>../../../lv_examples/src/lv_ex_widgets/lv_ex_cpicker/lv_ex_cpicker_2.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="lv_ex_dropdown"
+                           displayName="lv_ex_dropdown"
+                           projectFiles="true">
+              <itemPath>../../../lv_examples/src/lv_ex_widgets/lv_ex_dropdown/lv_ex_dropdown_1.c</itemPath>
+              <itemPath>../../../lv_examples/src/lv_ex_widgets/lv_ex_dropdown/lv_ex_dropdown_2.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="lv_ex_gauge" displayName="lv_ex_gauge" projectFiles="true">
+              <itemPath>../../../lv_examples/src/lv_ex_widgets/lv_ex_gauge/lv_ex_gauge_1.c</itemPath>
+              <itemPath>../../../lv_examples/src/lv_ex_widgets/lv_ex_gauge/lv_ex_gauge_2.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="lv_ex_img" displayName="lv_ex_img" projectFiles="true">
+              <itemPath>../../../lv_examples/src/lv_ex_widgets/lv_ex_img/lv_ex_img_1.c</itemPath>
+              <itemPath>../../../lv_examples/src/lv_ex_widgets/lv_ex_img/lv_ex_img_2.c</itemPath>
+              <itemPath>../../../lv_examples/src/lv_ex_widgets/lv_ex_img/lv_ex_img_3.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="lv_ex_imgbtn"
+                           displayName="lv_ex_imgbtn"
+                           projectFiles="true">
+              <itemPath>../../../lv_examples/src/lv_ex_widgets/lv_ex_imgbtn/imgbtn_blue.c</itemPath>
+              <itemPath>../../../lv_examples/src/lv_ex_widgets/lv_ex_imgbtn/imgbtn_green.c</itemPath>
+              <itemPath>../../../lv_examples/src/lv_ex_widgets/lv_ex_imgbtn/lv_ex_imgbtn_1.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="lv_ex_keyboard"
+                           displayName="lv_ex_keyboard"
+                           projectFiles="true">
+              <itemPath>../../../lv_examples/src/lv_ex_widgets/lv_ex_keyboard/lv_ex_keyboard_1.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="lv_ex_label" displayName="lv_ex_label" projectFiles="true">
+              <itemPath>../../../lv_examples/src/lv_ex_widgets/lv_ex_label/lv_ex_label_1.c</itemPath>
+              <itemPath>../../../lv_examples/src/lv_ex_widgets/lv_ex_label/lv_ex_label_2.c</itemPath>
+              <itemPath>../../../lv_examples/src/lv_ex_widgets/lv_ex_label/lv_ex_label_3.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="lv_ex_led" displayName="lv_ex_led" projectFiles="true">
+              <itemPath>../../../lv_examples/src/lv_ex_widgets/lv_ex_led/lv_ex_led_1.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="lv_ex_line" displayName="lv_ex_line" projectFiles="true">
+              <itemPath>../../../lv_examples/src/lv_ex_widgets/lv_ex_line/lv_ex_line_1.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="lv_ex_linemeter"
+                           displayName="lv_ex_linemeter"
+                           projectFiles="true">
+              <itemPath>../../../lv_examples/src/lv_ex_widgets/lv_ex_linemeter/lv_ex_linemeter_1.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="lv_ex_list" displayName="lv_ex_list" projectFiles="true">
+              <itemPath>../../../lv_examples/src/lv_ex_widgets/lv_ex_list/lv_ex_list_1.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="lv_ex_msgbox"
+                           displayName="lv_ex_msgbox"
+                           projectFiles="true">
+              <itemPath>../../../lv_examples/src/lv_ex_widgets/lv_ex_msgbox/lv_ex_msgbox_1.c</itemPath>
+              <itemPath>../../../lv_examples/src/lv_ex_widgets/lv_ex_msgbox/lv_ex_msgbox_2.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="lv_ex_obj" displayName="lv_ex_obj" projectFiles="true">
+              <itemPath>../../../lv_examples/src/lv_ex_widgets/lv_ex_obj/lv_ex_obj_1.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="lv_ex_objmask"
+                           displayName="lv_ex_objmask"
+                           projectFiles="true">
+              <itemPath>../../../lv_examples/src/lv_ex_widgets/lv_ex_objmask/lv_ex_objmask_1.c</itemPath>
+              <itemPath>../../../lv_examples/src/lv_ex_widgets/lv_ex_objmask/lv_ex_objmask_2.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="lv_ex_page" displayName="lv_ex_page" projectFiles="true">
+              <itemPath>../../../lv_examples/src/lv_ex_widgets/lv_ex_page/lv_ex_page_1.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="lv_ex_roller"
+                           displayName="lv_ex_roller"
+                           projectFiles="true">
+              <itemPath>../../../lv_examples/src/lv_ex_widgets/lv_ex_roller/lv_ex_roller_1.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="lv_ex_slider"
+                           displayName="lv_ex_slider"
+                           projectFiles="true">
+              <itemPath>../../../lv_examples/src/lv_ex_widgets/lv_ex_slider/lv_ex_slider_1.c</itemPath>
+              <itemPath>../../../lv_examples/src/lv_ex_widgets/lv_ex_slider/lv_ex_slider_2.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="lv_ex_spinbox"
+                           displayName="lv_ex_spinbox"
+                           projectFiles="true">
+              <itemPath>../../../lv_examples/src/lv_ex_widgets/lv_ex_spinbox/lv_ex_spinbox_1.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="lv_ex_spinner"
+                           displayName="lv_ex_spinner"
+                           projectFiles="true">
+              <itemPath>../../../lv_examples/src/lv_ex_widgets/lv_ex_spinner/lv_ex_spinner_1.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="lv_ex_switch"
+                           displayName="lv_ex_switch"
+                           projectFiles="true">
+              <itemPath>../../../lv_examples/src/lv_ex_widgets/lv_ex_switch/lv_ex_switch_1.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="lv_ex_table" displayName="lv_ex_table" projectFiles="true">
+              <itemPath>../../../lv_examples/src/lv_ex_widgets/lv_ex_table/lv_ex_table_1.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="lv_ex_tabview"
+                           displayName="lv_ex_tabview"
+                           projectFiles="true">
+              <itemPath>../../../lv_examples/src/lv_ex_widgets/lv_ex_tabview/lv_ex_tabview_1.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="lv_ex_textarea"
+                           displayName="lv_ex_textarea"
+                           projectFiles="true">
+              <itemPath>../../../lv_examples/src/lv_ex_widgets/lv_ex_textarea/lv_ex_textarea_1.c</itemPath>
+              <itemPath>../../../lv_examples/src/lv_ex_widgets/lv_ex_textarea/lv_ex_textarea_2.c</itemPath>
+              <itemPath>../../../lv_examples/src/lv_ex_widgets/lv_ex_textarea/lv_ex_textarea_3.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="lv_ex_tileview"
+                           displayName="lv_ex_tileview"
+                           projectFiles="true">
+              <itemPath>../../../lv_examples/src/lv_ex_widgets/lv_ex_tileview/lv_ex_tileview_1.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="lv_ex_win" displayName="lv_ex_win" projectFiles="true">
+              <itemPath>../../../lv_examples/src/lv_ex_widgets/lv_ex_win/lv_ex_win_1.c</itemPath>
+            </logicalFolder>
+            <itemPath>../../../lv_examples/src/lv_ex_widgets/lv_ex_widgets.h</itemPath>
+          </logicalFolder>
+          <itemPath>../../../lv_examples/src/lv_examples.h</itemPath>
+        </logicalFolder>
+        <itemPath>../../../lv_examples/lv_examples.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="lv_fs_if" displayName="lv_fs_if" projectFiles="true">
+        <itemPath>../../../lv_fs_if/lv_fs_fatfs.c</itemPath>
+        <itemPath>../../../lv_fs_if/lv_fs_if.c</itemPath>
+        <itemPath>../../../lv_fs_if/lv_fs_if.h</itemPath>
+        <itemPath>../../../lv_fs_if/lv_fs_pc.c</itemPath>
+      </logicalFolder>
+      <logicalFolder name="lvgl" displayName="lvgl" projectFiles="true">
+        <logicalFolder name="src" displayName="src" projectFiles="true">
+          <logicalFolder name="lv_core" displayName="lv_core" projectFiles="true">
+            <itemPath>../../../lvgl/src/lv_core/lv_disp.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_core/lv_disp.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_core/lv_group.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_core/lv_group.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_core/lv_indev.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_core/lv_indev.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_core/lv_obj.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_core/lv_obj.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_core/lv_obj_style_dec.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_core/lv_refr.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_core/lv_refr.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_core/lv_style.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_core/lv_style.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="lv_draw" displayName="lv_draw" projectFiles="true">
+            <itemPath>../../../lvgl/src/lv_draw/lv_draw.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_draw/lv_draw_arc.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_draw/lv_draw_arc.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_draw/lv_draw_blend.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_draw/lv_draw_blend.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_draw/lv_draw_img.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_draw/lv_draw_img.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_draw/lv_draw_label.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_draw/lv_draw_label.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_draw/lv_draw_line.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_draw/lv_draw_line.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_draw/lv_draw_mask.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_draw/lv_draw_mask.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_draw/lv_draw_rect.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_draw/lv_draw_rect.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_draw/lv_draw_triangle.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_draw/lv_draw_triangle.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_draw/lv_img_buf.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_draw/lv_img_buf.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_draw/lv_img_cache.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_draw/lv_img_cache.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_draw/lv_img_decoder.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_draw/lv_img_decoder.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="lv_font" displayName="lv_font" projectFiles="true">
+            <itemPath>../../../lvgl/src/lv_font/lv_font.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_font/lv_font.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_font/lv_font_dejavu_16_persian_hebrew.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_font/lv_font_fmt_txt.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_font/lv_font_fmt_txt.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_font/lv_font_loader.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_font/lv_font_loader.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_font/lv_font_montserrat_10.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_font/lv_font_montserrat_12.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_font/lv_font_montserrat_12_subpx.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_font/lv_font_montserrat_14.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_font/lv_font_montserrat_16.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_font/lv_font_montserrat_18.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_font/lv_font_montserrat_20.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_font/lv_font_montserrat_22.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_font/lv_font_montserrat_24.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_font/lv_font_montserrat_26.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_font/lv_font_montserrat_28.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_font/lv_font_montserrat_28_compressed.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_font/lv_font_montserrat_30.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_font/lv_font_montserrat_32.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_font/lv_font_montserrat_34.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_font/lv_font_montserrat_36.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_font/lv_font_montserrat_38.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_font/lv_font_montserrat_40.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_font/lv_font_montserrat_42.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_font/lv_font_montserrat_44.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_font/lv_font_montserrat_46.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_font/lv_font_montserrat_48.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_font/lv_font_montserrat_8.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_font/lv_font_simsun_16_cjk.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_font/lv_font_unscii_16.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_font/lv_font_unscii_8.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_font/lv_symbol_def.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="lv_gpu" displayName="lv_gpu" projectFiles="true">
+            <itemPath>../../../lvgl/src/lv_gpu/lv_gpu_nxp_pxp.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_gpu/lv_gpu_nxp_pxp.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_gpu/lv_gpu_nxp_pxp_osa.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_gpu/lv_gpu_nxp_pxp_osa.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_gpu/lv_gpu_nxp_vglite.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_gpu/lv_gpu_nxp_vglite.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_gpu/lv_gpu_stm32_dma2d.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_gpu/lv_gpu_stm32_dma2d.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="lv_hal" displayName="lv_hal" projectFiles="true">
+            <itemPath>../../../lvgl/src/lv_hal/lv_hal.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_hal/lv_hal_disp.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_hal/lv_hal_disp.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_hal/lv_hal_indev.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_hal/lv_hal_indev.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_hal/lv_hal_tick.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_hal/lv_hal_tick.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="lv_misc" displayName="lv_misc" projectFiles="true">
+            <itemPath>../../../lvgl/src/lv_misc/lv_anim.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_misc/lv_anim.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_misc/lv_area.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_misc/lv_area.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_misc/lv_async.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_misc/lv_async.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_misc/lv_bidi.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_misc/lv_bidi.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_misc/lv_color.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_misc/lv_color.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_misc/lv_debug.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_misc/lv_debug.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_misc/lv_fs.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_misc/lv_fs.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_misc/lv_gc.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_misc/lv_gc.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_misc/lv_ll.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_misc/lv_ll.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_misc/lv_log.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_misc/lv_log.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_misc/lv_math.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_misc/lv_math.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_misc/lv_mem.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_misc/lv_mem.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_misc/lv_printf.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_misc/lv_printf.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_misc/lv_task.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_misc/lv_task.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_misc/lv_templ.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_misc/lv_templ.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_misc/lv_txt.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_misc/lv_txt.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_misc/lv_txt_ap.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_misc/lv_txt_ap.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_misc/lv_types.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_misc/lv_utils.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_misc/lv_utils.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="lv_themes" displayName="lv_themes" projectFiles="true">
+            <itemPath>../../../lvgl/src/lv_themes/lv_theme.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_themes/lv_theme.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_themes/lv_theme_empty.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_themes/lv_theme_empty.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_themes/lv_theme_material.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_themes/lv_theme_material.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_themes/lv_theme_mono.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_themes/lv_theme_mono.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_themes/lv_theme_template.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_themes/lv_theme_template.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="lv_widgets" displayName="lv_widgets" projectFiles="true">
+            <itemPath>../../../lvgl/src/lv_widgets/lv_arc.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_arc.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_bar.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_bar.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_btn.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_btn.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_btnmatrix.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_btnmatrix.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_calendar.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_calendar.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_canvas.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_canvas.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_chart.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_chart.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_checkbox.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_checkbox.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_cont.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_cont.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_cpicker.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_cpicker.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_dropdown.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_dropdown.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_gauge.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_gauge.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_img.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_img.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_imgbtn.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_imgbtn.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_keyboard.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_keyboard.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_label.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_label.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_led.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_led.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_line.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_line.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_linemeter.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_linemeter.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_list.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_list.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_msgbox.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_msgbox.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_objmask.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_objmask.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_objx_templ.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_objx_templ.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_page.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_page.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_roller.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_roller.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_slider.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_slider.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_spinbox.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_spinbox.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_spinner.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_spinner.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_switch.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_switch.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_table.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_table.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_tabview.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_tabview.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_textarea.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_textarea.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_tileview.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_tileview.h</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_win.c</itemPath>
+            <itemPath>../../../lvgl/src/lv_widgets/lv_win.h</itemPath>
+          </logicalFolder>
+          <itemPath>../../../lvgl/src/lvgl.h</itemPath>
+          <itemPath>../../../lvgl/src/lv_api_map.h</itemPath>
+          <itemPath>../../../lvgl/src/lv_conf_internal.h</itemPath>
+          <itemPath>../../../lvgl/src/lv_conf_kconfig.h</itemPath>
+        </logicalFolder>
+        <itemPath>../../../lvgl/lvgl.h</itemPath>
+      </logicalFolder>
+      <itemPath>../../../lv_conf.h</itemPath>
+      <itemPath>../../../lv_ex_conf.h</itemPath>
+    </logicalFolder>
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
@@ -343,7 +878,7 @@
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
-    <Elem>../src</Elem>
+    <Elem>../../..</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -353,7 +888,7 @@
         <targetDevice>PIC32MZ2064DAA288</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>ICD4Tool</platformTool>
+        <platformTool>noID</platformTool>
         <languageToolchain>XC32</languageToolchain>
         <languageToolchainVersion>2.50</languageToolchainVersion>
         <platform>3</platform>
@@ -398,7 +933,7 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/mzda_sk_extddr_meb2_tm4301b;../src/config/mzda_sk_extddr_meb2_tm4301b/system/fs/fat_fs/file_system;../src/config/mzda_sk_extddr_meb2_tm4301b/system/fs/fat_fs/hardware_access;../src/packs/PIC32MZ2064DAA288_DFP"/>
+                  value="../src;../src/config/mzda_sk_extddr_meb2_tm4301b;../src/config/mzda_sk_extddr_meb2_tm4301b/system/fs/fat_fs/file_system;../src/config/mzda_sk_extddr_meb2_tm4301b/system/fs/fat_fs/hardware_access;../src/packs/PIC32MZ2064DAA288_DFP;..\..\..\lv_examples;..\..\..\lv_fs_if;..\..\..\lvgl"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -494,7 +1029,7 @@
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/mzda_sk_extddr_meb2_tm4301b;../src/config/mzda_sk_extddr_meb2_tm4301b/system/fs/fat_fs/file_system;../src/config/mzda_sk_extddr_meb2_tm4301b/system/fs/fat_fs/hardware_access;../src/packs/PIC32MZ2064DAA288_DFP"/>
+                  value="../src;../src/config/mzda_sk_extddr_meb2_tm4301b;../src/config/mzda_sk_extddr_meb2_tm4301b/system/fs/fat_fs/file_system;../src/config/mzda_sk_extddr_meb2_tm4301b/system/fs/fat_fs/hardware_access;../src/packs/PIC32MZ2064DAA288_DFP;../../../lvgl;../../../lv_fs_if;../../../lv_examples"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>

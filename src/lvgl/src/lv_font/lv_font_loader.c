@@ -162,7 +162,8 @@ void lv_font_free(lv_font_t * font)
                 (lv_font_fmt_txt_cmap_t *) dsc->cmaps;
 
             if(NULL != cmaps) {
-                for(int i = 0; i < dsc->cmap_num; ++i) {
+                int i;
+                for(i = 0; i < dsc->cmap_num; ++i) {
                     if(NULL != cmaps[i].glyph_id_ofs_list)
                         lv_mem_free((void *) cmaps[i].glyph_id_ofs_list);
                     if(NULL != cmaps[i].unicode_list)
@@ -251,7 +252,8 @@ static bool load_cmaps_tables(lv_fs_file_t * fp, lv_font_fmt_txt_dsc_t * font_ds
         return false;
     }
 
-    for(unsigned int i = 0; i < font_dsc->cmap_num; ++i) {
+    unsigned int i;
+    for(i = 0; i < font_dsc->cmap_num; ++i) {
         lv_fs_res_t res = lv_fs_seek(fp, cmaps_start + cmap_table[i].data_offset);
         if(res != LV_FS_RES_OK) {
             return false;
@@ -356,8 +358,9 @@ static int32_t load_glyph(lv_fs_file_t * fp, lv_font_fmt_txt_dsc_t * font_dsc,
     font_dsc->glyph_dsc = glyph_dsc;
 
     int cur_bmp_size = 0;
+    unsigned int i;
 
-    for(unsigned int i = 0; i < loca_count; ++i) {
+    for(i = 0; i < loca_count; ++i) {
         lv_font_fmt_txt_glyph_dsc_t * gdsc = &glyph_dsc[i];
 
         lv_fs_res_t res = lv_fs_seek(fp, start + glyph_offset[i]);
@@ -425,7 +428,7 @@ static int32_t load_glyph(lv_fs_file_t * fp, lv_font_fmt_txt_dsc_t * font_dsc,
 
     cur_bmp_size = 0;
 
-    for(unsigned int i = 1; i < loca_count; ++i) {
+    for(i = 1; i < loca_count; ++i) {
         lv_fs_res_t res = lv_fs_seek(fp, start + glyph_offset[i]);
         if(res != LV_FS_RES_OK) {
             return -1;
@@ -452,7 +455,8 @@ static int32_t load_glyph(lv_fs_file_t * fp, lv_font_fmt_txt_dsc_t * font_dsc,
             }
         }
         else {
-            for(int k = 0; k < bmp_size - 1; ++k) {
+            int k;
+            for(k = 0; k < bmp_size - 1; ++k) {
                 glyph_bmp[cur_bmp_size + k] = read_bits(&bit_it, 8, &res);
                 if(res != LV_FS_RES_OK) {
                     return -1;
@@ -536,7 +540,8 @@ static bool lvgl_load_font(lv_fs_file_t * fp, lv_font_t * font)
     uint32_t * glyph_offset = lv_mem_alloc(sizeof(uint32_t) * (loca_count + 1));
 
     if(font_header.index_to_loc_format == 0) {
-        for(unsigned int i = 0; i < loca_count; ++i) {
+        unsigned int i;
+        for(i = 0; i < loca_count; ++i) {
             uint16_t offset;
             if(lv_fs_read(fp, &offset, sizeof(uint16_t), NULL) != LV_FS_RES_OK) {
                 failed = true;

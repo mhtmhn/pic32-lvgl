@@ -7,7 +7,7 @@
  * COPY THIS FILE AS `lv_conf.h` NEXT TO the `lvgl` FOLDER
  */
 
-#if 0 /*Set it to "1" to enable content*/
+#if 1 /*Set it to "1" to enable content*/
 
 #ifndef LV_CONF_H
 #define LV_CONF_H
@@ -209,6 +209,13 @@ e.g. "stm32f769xx.h" or "stm32f429xx.h" */
 
 /*1: Use VG-Lite for CPU offload on NXP RTxxx platforms */
 #define LV_USE_GPU_NXP_VG_LITE   0
+
+/*File system interface*/
+#define LV_USE_FS_IF	1
+#if LV_USE_FS_IF
+#  define LV_FS_IF_FATFS    '0'
+#  define LV_FS_IF_PC       '\0'
+#endif  /*LV_USE_FS_IF*/
 
 /* 1: Enable file system (might be required for images */
 #define LV_USE_FILESYSTEM       1

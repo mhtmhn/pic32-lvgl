@@ -771,11 +771,12 @@ static LV_ATTRIBUTE_FAST_MEM void lv_refr_vdb_rotate_90(bool invert_i, lv_coord_
 
     uint32_t invert = (area_w * area_h) - 1;
     uint32_t initial_i = ((area_w - 1) * area_h);
-    for(lv_coord_t y = 0; y < area_h; y++) {
+    lv_coord_t x, y;
+    for(y = 0; y < area_h; y++) {
         uint32_t i = initial_i + y;
         if(invert_i)
             i = invert - i;
-        for(lv_coord_t x = 0; x < area_w; x++) {
+        for(x = 0; x < area_w; x++) {
             rot_buf[i] = *(orig_color_p++);
             if(invert_i)
                 i += area_h;
@@ -804,8 +805,9 @@ static inline void lv_vdb_rotate4(lv_color_t * a, lv_color_t * b, lv_color_t * c
  */
 static void lv_refr_vdb_rotate_90_sqr(bool is_270, lv_coord_t w, lv_color_t * color_p)
 {
-    for(lv_coord_t i = 0; i < w / 2; i++) {
-        for(lv_coord_t j = 0; j < (w + 1) / 2; j++) {
+    lv_coord_t i, j;
+    for(i = 0; i < w / 2; i++) {
+        for(j = 0; j < (w + 1) / 2; j++) {
             lv_coord_t inv_i = (w - 1) - i;
             lv_coord_t inv_j = (w - 1) - j;
             if(is_270) {
