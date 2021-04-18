@@ -74,3 +74,8 @@ void APP_FS_Tasks(void) {
             break;
     }
 }
+
+/* Common Interface */
+bool COMMON_APP_FS_CheckMount(void) {
+    return app_fs.mounted;
+}

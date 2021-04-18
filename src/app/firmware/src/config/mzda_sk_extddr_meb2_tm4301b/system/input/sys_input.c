@@ -29,7 +29,7 @@
 #include <string.h>
 
 #define SYS_INP_MAX_LISTENERS        1  // max number of listeners
-#define SYS_INP_MAX_GENERAL_EVENTS   60 // max number of pending events
+#define SYS_INP_MAX_GENERAL_EVENTS   16 // max number of pending events
 
 // event type values
 enum

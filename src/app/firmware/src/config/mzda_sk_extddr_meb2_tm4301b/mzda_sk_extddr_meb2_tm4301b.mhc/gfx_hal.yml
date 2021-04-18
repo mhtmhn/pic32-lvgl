@@ -4,13 +4,6 @@ attributes: {id: gfx_hal}
 children:
 - type: Symbols
   children:
-  - type: Combo
-    attributes: {id: ColorModeHint}
-    children:
-    - type: Values
-      children:
-      - type: User
-        attributes: {value: GFX_COLOR_MODE_RGB_565}
   - type: Integer
     attributes: {id: DisplayBacklightDisable}
     children:
@@ -140,7 +133,7 @@ children:
       - type: Dynamic
         attributes: {id: gfx_hal, value: '2'}
       - type: User
-        attributes: {value: '10'}
+        attributes: {value: '72'}
   - type: Integer
     attributes: {id: DisplayVertFrontPorch}
     children:
@@ -162,13 +155,6 @@ children:
       children:
       - type: Dynamic
         attributes: {id: gfx_hal, value: '480'}
-  - type: Boolean
-    attributes: {id: DoubleBufferHint}
-    children:
-    - type: Values
-      children:
-      - type: User
-        attributes: {value: 'false'}
   - type: String
     attributes: {id: DriverInfoFunction}
     children:
@@ -190,13 +176,6 @@ children:
       children:
       - type: Dynamic
         attributes: {id: gfx_driver_glcd, value: '1'}
-  - type: Boolean
-    attributes: {id: LCCRefreshHint}
-    children:
-    - type: Values
-      children:
-      - type: User
-        attributes: {value: 'false'}
   - type: Integer
     attributes: {id: PixelClock}
     children:
@@ -231,7 +210,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: gfx_hal, value: '80'}
+        attributes: {id: gfx_hal, value: '66'}
 - type: Attachments
   children:
   - type: DirectDependency
@@ -274,4 +253,4 @@ children:
         children:
         - {type: Value, value: gfx_driver_2dgpu}
 - type: ElementPosition
-  attributes: {x: '530', y: '642', id: gfx_hal}
+  attributes: {x: '529', y: '640', id: gfx_hal}

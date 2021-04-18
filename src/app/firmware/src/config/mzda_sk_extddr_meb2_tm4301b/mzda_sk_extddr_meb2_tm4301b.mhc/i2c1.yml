@@ -10,7 +10,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: i2c1, value: '242'}
+        attributes: {id: i2c1, value: '117'}
   - type: Integer
     attributes: {id: I2CS_CORE_TIMER_FREQUENCY}
     children:
@@ -45,7 +45,7 @@ children:
     - type: Values
       children:
       - type: User
-        attributes: {value: '200000'}
+        attributes: {value: '400000'}
   - type: Combo
     attributes: {id: I2C_OPERATING_MODE}
     children:

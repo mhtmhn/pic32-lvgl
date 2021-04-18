@@ -15,13 +15,15 @@
 
 #include <stdint.h>
 
+#include "app/firmware/src/config/mzda_sk_extddr_meb2_tm4301b/toolchain_specifics.h"
+
 /*====================
    Graphical settings
  *====================*/
 
 /* Maximal horizontal and vertical resolution to support by the library.*/
 #define LV_HOR_RES_MAX          (480)
-#define LV_VER_RES_MAX          (320)
+#define LV_VER_RES_MAX          (272)
 
 /* Color depth:
  * - 1:  1 byte per pixel
@@ -48,12 +50,12 @@
 
 /* Default display refresh period.
  * Can be changed in the display driver (`lv_disp_drv_t`).*/
-#define LV_DISP_DEF_REFR_PERIOD      30      /*[ms]*/
+#define LV_DISP_DEF_REFR_PERIOD      15      /*[ms]*/
 
 /* Dot Per Inch: used to initialize default sizes.
  * E.g. a button with width = LV_DPI / 2 -> half inch wide
  * (Not so important, you can adjust it to modify default sizes and spaces)*/
-#define LV_DPI              130     /*[px]*/
+#define LV_DPI              128     /*[px]*/
 
 /* The the real width of the display changes some default values:
  * default object sizes, layout of examples, etc.
@@ -83,21 +85,21 @@ typedef int16_t lv_coord_t;
 #define LV_MEM_CUSTOM      0
 #if LV_MEM_CUSTOM == 0
 /* Size of the memory used by `lv_mem_alloc` in bytes (>= 2kB)*/
-#  define LV_MEM_SIZE    (32U * 1024U)
+#define LV_MEM_SIZE    (128U * 1024U)
 
 /* Compiler prefix for a big array declaration */
-#  define LV_MEM_ATTR
+#define LV_MEM_ATTR
 
 /* Set an address for the memory pool instead of allocating it as an array.
  * Can be in external SRAM too. */
-#  define LV_MEM_ADR          0
+#define LV_MEM_ADR          0
 
 /* Automatically defrag. on free. Defrag. means joining the adjacent free cells. */
-#  define LV_MEM_AUTO_DEFRAG  1
+#define LV_MEM_AUTO_DEFRAG  1
 #else       /*LV_MEM_CUSTOM*/
-#  define LV_MEM_CUSTOM_INCLUDE <stdlib.h>   /*Header for the dynamic memory function*/
-#  define LV_MEM_CUSTOM_ALLOC   malloc       /*Wrapper to malloc*/
-#  define LV_MEM_CUSTOM_FREE    free         /*Wrapper to free*/
+#define LV_MEM_CUSTOM_INCLUDE <stdlib.h>   /*Header for the dynamic memory function*/
+#define LV_MEM_CUSTOM_ALLOC   malloc       /*Wrapper to malloc*/
+#define LV_MEM_CUSTOM_FREE    free         /*Wrapper to free*/
 #endif     /*LV_MEM_CUSTOM*/
 
 /* Use the standard memcpy and memset instead of LVGL's own functions.
@@ -108,9 +110,9 @@ typedef int16_t lv_coord_t;
  * Used if lvgl is binded to higher level language and the memory is managed by that language */
 #define LV_ENABLE_GC 0
 #if LV_ENABLE_GC != 0
-#  define LV_GC_INCLUDE "gc.h"                           /*Include Garbage Collector related things*/
-#  define LV_MEM_CUSTOM_REALLOC   your_realloc           /*Wrapper to realloc*/
-#  define LV_MEM_CUSTOM_GET_SIZE  your_mem_get_size      /*Wrapper to lv_mem_get_size*/
+#define LV_GC_INCLUDE "gc.h"                           /*Include Garbage Collector related things*/
+#define LV_MEM_CUSTOM_REALLOC   your_realloc           /*Wrapper to realloc*/
+#define LV_MEM_CUSTOM_GET_SIZE  your_mem_get_size      /*Wrapper to lv_mem_get_size*/
 #endif /* LV_ENABLE_GC */
 
 /*=======================
@@ -121,13 +123,13 @@ typedef int16_t lv_coord_t;
  * Can be changed in the Input device driver (`lv_indev_drv_t`)*/
 
 /* Input device read period in milliseconds */
-#define LV_INDEV_DEF_READ_PERIOD          30
+#define LV_INDEV_DEF_READ_PERIOD          4
 
 /* Drag threshold in pixels */
 #define LV_INDEV_DEF_DRAG_LIMIT           10
 
 /* Drag throw slow-down in [%]. Greater value -> faster slow-down */
-#define LV_INDEV_DEF_DRAG_THROW           10
+#define LV_INDEV_DEF_DRAG_THROW           2
 
 /* Long press time in milliseconds.
  * Time to send `LV_EVENT_LONG_PRESSED`) */
@@ -138,7 +140,7 @@ typedef int16_t lv_coord_t;
 #define LV_INDEV_DEF_LONG_PRESS_REP_TIME  100
 
 /* Gesture threshold in pixels */
-#define LV_INDEV_DEF_GESTURE_LIMIT        50
+#define LV_INDEV_DEF_GESTURE_LIMIT        30
 
 /* Gesture min velocity at release before swipe (pixels)*/
 #define LV_INDEV_DEF_GESTURE_MIN_VELOCITY 3
@@ -163,7 +165,7 @@ typedef void * lv_anim_user_data_t;
  * LV_SHADOW_CACHE_SIZE is the max. shadow size to buffer,
  * where shadow size is `shadow_width + radius`
  * Caching has LV_SHADOW_CACHE_SIZE^2 RAM cost*/
-#define LV_SHADOW_CACHE_SIZE    0
+#define LV_SHADOW_CACHE_SIZE    64
 #endif
 
 /*1: enable outline drawing on rectangles*/
@@ -191,7 +193,7 @@ typedef void * lv_group_user_data_t;
 #endif  /*LV_USE_GROUP*/
 
 /* 1: Enable GPU interface*/
-#define LV_USE_GPU              1   /*Only enables `gpu_fill_cb` and `gpu_blend_cb` in the disp. drv- */
+#define LV_USE_GPU              0   /*Only enables `gpu_fill_cb` and `gpu_blend_cb` in the disp. drv- */
 #define LV_USE_GPU_STM32_DMA2D  0
 /*If enabling LV_USE_GPU_STM32_DMA2D, LV_GPU_DMA2D_CMSIS_INCLUDE must be defined to include path of CMSIS header of target processor
 e.g. "stm32f769xx.h" or "stm32f429xx.h" */
@@ -213,8 +215,8 @@ e.g. "stm32f769xx.h" or "stm32f429xx.h" */
 /*File system interface*/
 #define LV_USE_FS_IF	1
 #if LV_USE_FS_IF
-#  define LV_FS_IF_FATFS    '0'
-#  define LV_FS_IF_PC       '\0'
+#define LV_FS_IF_FATFS    '0'
+#define LV_FS_IF_PC       '\0'
 #endif  /*LV_USE_FS_IF*/
 
 /* 1: Enable file system (might be required for images */
@@ -228,7 +230,7 @@ typedef void * lv_fs_drv_user_data_t;
 #define LV_USE_USER_DATA        0
 
 /*1: Show CPU usage and FPS count in the right bottom corner*/
-#define LV_USE_PERF_MONITOR     0
+#define LV_USE_PERF_MONITOR     1
 
 /*1: Use the functions and types from the older API if possible */
 #define LV_USE_API_EXTENSION_V6  1
@@ -279,11 +281,11 @@ typedef void * lv_img_decoder_user_data_t;
  * This alignment will be explicitly applied where needed.
  * LV_ATTRIBUTE_MEM_ALIGN_SIZE should be used to specify required align size.
  * E.g. __attribute__((aligned(LV_ATTRIBUTE_MEM_ALIGN_SIZE))) */
-#define LV_ATTRIBUTE_MEM_ALIGN
+#define LV_ATTRIBUTE_MEM_ALIGN __ALIGNED(4)
 
 /* Attribute to mark large constant arrays for example
  * font's bitmaps */
-#define LV_ATTRIBUTE_LARGE_CONST
+#define LV_ATTRIBUTE_LARGE_CONST const
 
 /* Prefix performance critical functions to place them into a faster memory (e.g RAM)
  * Uses 15-20 kB extra memory */
@@ -299,7 +301,7 @@ typedef void * lv_img_decoder_user_data_t;
 
 /* Prefix variables that are used in GPU accelerated operations, often these need to be
  * placed in RAM sections that are DMA accessible */
-#define LV_ATTRIBUTE_DMA
+#define LV_ATTRIBUTE_DMA __COHERENT
 
 /*===================
  *  HAL settings
@@ -313,15 +315,15 @@ typedef void * lv_img_decoder_user_data_t;
 #define LV_TICK_CUSTOM_SYS_TIME_EXPR (millis())     /*Expression evaluating to current system time in ms*/
 #endif   /*LV_TICK_CUSTOM*/
 
-typedef void * lv_disp_drv_user_data_t;             /*Type of user data in the display driver*/
-typedef void * lv_indev_drv_user_data_t;            /*Type of user data in the input device driver*/
+typedef void * lv_disp_drv_user_data_t; /*Type of user data in the display driver*/
+typedef void * lv_indev_drv_user_data_t; /*Type of user data in the input device driver*/
 
 /*================
  * Log settings
  *===============*/
 
 /*1: Enable the log module*/
-#define LV_USE_LOG      0
+#define LV_USE_LOG      1
 #if LV_USE_LOG
 /* How important log should be added:
  * LV_LOG_LEVEL_TRACE       A lot of logs to give detailed information
@@ -330,11 +332,11 @@ typedef void * lv_indev_drv_user_data_t;            /*Type of user data in the i
  * LV_LOG_LEVEL_ERROR       Only critical issue, when the system may fail
  * LV_LOG_LEVEL_NONE        Do not log anything
  */
-#  define LV_LOG_LEVEL    LV_LOG_LEVEL_WARN
+#define LV_LOG_LEVEL    LV_LOG_LEVEL_WARN
 
 /* 1: Print the log with 'printf';
  * 0: user need to register a callback with `lv_log_register_print_cb`*/
-#  define LV_LOG_PRINTF   0
+#define LV_LOG_PRINTF   1
 #endif  /*LV_USE_LOG*/
 
 /*=================
@@ -389,8 +391,8 @@ typedef void * lv_indev_drv_user_data_t;            /*Type of user data in the i
 /* Montserrat fonts with bpp = 4
  * https://fonts.google.com/specimen/Montserrat  */
 #define LV_FONT_MONTSERRAT_8     0
-#define LV_FONT_MONTSERRAT_10    0
-#define LV_FONT_MONTSERRAT_12    0
+#define LV_FONT_MONTSERRAT_10    1
+#define LV_FONT_MONTSERRAT_12    1
 #define LV_FONT_MONTSERRAT_14    1
 #define LV_FONT_MONTSERRAT_16    0
 #define LV_FONT_MONTSERRAT_18    0
@@ -399,7 +401,7 @@ typedef void * lv_indev_drv_user_data_t;            /*Type of user data in the i
 #define LV_FONT_MONTSERRAT_24    0
 #define LV_FONT_MONTSERRAT_26    0
 #define LV_FONT_MONTSERRAT_28    0
-#define LV_FONT_MONTSERRAT_30    0
+#define LV_FONT_MONTSERRAT_30    1
 #define LV_FONT_MONTSERRAT_32    0
 #define LV_FONT_MONTSERRAT_34    0
 #define LV_FONT_MONTSERRAT_36    0
@@ -503,7 +505,7 @@ typedef void * lv_font_user_data_t;
  * */
 #define LV_TXT_ENC LV_TXT_ENC_UTF8
 
- /*Can break (wrap) texts on these chars*/
+/*Can break (wrap) texts on these chars*/
 #define LV_TXT_BREAK_CHARS                  " ,.;:-_"
 
 /* If a word is at least this long, will break wherever "prettiest"
@@ -542,11 +544,11 @@ typedef void * lv_font_user_data_t;
 /*Change the built in (v)snprintf functions*/
 #define LV_SPRINTF_CUSTOM   0
 #if LV_SPRINTF_CUSTOM
-#  define LV_SPRINTF_INCLUDE <stdio.h>
-#  define lv_snprintf     snprintf
-#  define lv_vsnprintf    vsnprintf
+#define LV_SPRINTF_INCLUDE <stdio.h>
+#define lv_snprintf     snprintf
+#define lv_vsnprintf    vsnprintf
 #else   /*!LV_SPRINTF_CUSTOM*/
-#  define LV_SPRINTF_DISABLE_FLOAT 1
+#define LV_SPRINTF_DISABLE_FLOAT 1
 #endif  /*LV_SPRINTF_CUSTOM*/
 
 /*===================
@@ -559,9 +561,9 @@ typedef void * lv_obj_user_data_t;
 /*Provide a function to free user data*/
 #define LV_USE_USER_DATA_FREE 0
 #if LV_USE_USER_DATA_FREE
-#  define LV_USER_DATA_FREE_INCLUDE  "something.h"  /*Header for user data free function*/
+#define LV_USER_DATA_FREE_INCLUDE  "something.h"  /*Header for user data free function*/
 /* Function prototype : void user_data_free(lv_obj_t * obj); */
-#  define LV_USER_DATA_FREE  (user_data_free)       /*Invoking for user data free function*/
+#define LV_USER_DATA_FREE  (user_data_free)       /*Invoking for user data free function*/
 #endif
 #endif
 
@@ -597,7 +599,7 @@ typedef void * lv_obj_user_data_t;
 /*Calendar (dependencies: -)*/
 #define LV_USE_CALENDAR 1
 #if LV_USE_CALENDAR
-#  define LV_CALENDAR_WEEK_STARTS_MONDAY    0
+#define LV_CALENDAR_WEEK_STARTS_MONDAY    0
 #endif
 
 /*Canvas (dependencies: lv_img)*/
@@ -609,7 +611,7 @@ typedef void * lv_obj_user_data_t;
 /*Chart (dependencies: -)*/
 #define LV_USE_CHART    1
 #if LV_USE_CHART
-#  define LV_CHART_AXIS_TICK_LABEL_MAX_LEN    256
+#define LV_CHART_AXIS_TICK_LABEL_MAX_LEN    256
 #endif
 
 /*Container (dependencies: -*/
@@ -622,7 +624,7 @@ typedef void * lv_obj_user_data_t;
 #define LV_USE_DROPDOWN    1
 #if LV_USE_DROPDOWN != 0
 /*Open and close default animation time [ms] (0: no animation)*/
-#  define LV_DROPDOWN_DEF_ANIM_TIME     200
+#define LV_DROPDOWN_DEF_ANIM_TIME     200
 #endif
 
 /*Gauge (dependencies:lv_bar, lv_linemeter)*/
@@ -635,7 +637,7 @@ typedef void * lv_obj_user_data_t;
 #define LV_USE_IMGBTN   1
 #if LV_USE_IMGBTN
 /*1: The imgbtn requires left, mid and right parts and the width can be set freely*/
-#  define LV_IMGBTN_TILED 0
+#define LV_IMGBTN_TILED 0
 #endif
 
 /*Keyboard (dependencies: lv_btnm)*/
@@ -645,23 +647,23 @@ typedef void * lv_obj_user_data_t;
 #define LV_USE_LABEL    1
 #if LV_USE_LABEL != 0
 /*Hor, or ver. scroll speed [px/sec] in 'LV_LABEL_LONG_ROLL/ROLL_CIRC' mode*/
-#  define LV_LABEL_DEF_SCROLL_SPEED       25
+#define LV_LABEL_DEF_SCROLL_SPEED       25
 
 /* Waiting period at beginning/end of animation cycle */
-#  define LV_LABEL_WAIT_CHAR_COUNT        3
+#define LV_LABEL_WAIT_CHAR_COUNT        3
 
 /*Enable selecting text of the label */
-#  define LV_LABEL_TEXT_SEL               0
+#define LV_LABEL_TEXT_SEL               0
 
 /*Store extra some info in labels (12 bytes) to speed up drawing of very long texts*/
-#  define LV_LABEL_LONG_TXT_HINT          0
+#define LV_LABEL_LONG_TXT_HINT          0
 #endif
 
 /*LED (dependencies: -)*/
 #define LV_USE_LED      1
 #if LV_USE_LED
-#  define LV_LED_BRIGHT_MIN  120      /*Minimal brightness*/
-#  define LV_LED_BRIGHT_MAX  255     /*Maximal brightness*/
+#define LV_LED_BRIGHT_MIN  120      /*Minimal brightness*/
+#define LV_LED_BRIGHT_MAX  255     /*Maximal brightness*/
 #endif
 
 /*Line (dependencies: -*/
@@ -671,7 +673,7 @@ typedef void * lv_obj_user_data_t;
 #define LV_USE_LIST     1
 #if LV_USE_LIST != 0
 /*Default animation time of focusing to a list element [ms] (0: no animation)  */
-#  define LV_LIST_DEF_ANIM_TIME  100
+#define LV_LIST_DEF_ANIM_TIME  100
 #endif
 
 /*Line meter (dependencies: *;)*/
@@ -683,7 +685,7 @@ typedef void * lv_obj_user_data_t;
  * 1: Some extra precision
  * 2: Best precision
  */
-#  define LV_LINEMETER_PRECISE    1
+#define LV_LINEMETER_PRECISE    1
 #endif
 
 /*Mask (dependencies: -)*/
@@ -696,25 +698,25 @@ typedef void * lv_obj_user_data_t;
 #define LV_USE_PAGE     1
 #if LV_USE_PAGE != 0
 /*Focus default animation time [ms] (0: no animation)*/
-#  define LV_PAGE_DEF_ANIM_TIME     400
+#define LV_PAGE_DEF_ANIM_TIME     400
 #endif
 
 /*Preload (dependencies: lv_arc, lv_anim)*/
 #define LV_USE_SPINNER      1
 #if LV_USE_SPINNER != 0
-#  define LV_SPINNER_DEF_ARC_LENGTH   60      /*[deg]*/
-#  define LV_SPINNER_DEF_SPIN_TIME    1000    /*[ms]*/
-#  define LV_SPINNER_DEF_ANIM         LV_SPINNER_TYPE_SPINNING_ARC
+#define LV_SPINNER_DEF_ARC_LENGTH   60      /*[deg]*/
+#define LV_SPINNER_DEF_SPIN_TIME    1000    /*[ms]*/
+#define LV_SPINNER_DEF_ANIM         LV_SPINNER_TYPE_SPINNING_ARC
 #endif
 
 /*Roller (dependencies: lv_ddlist)*/
 #define LV_USE_ROLLER    1
 #if LV_USE_ROLLER != 0
 /*Focus animation time [ms] (0: no animation)*/
-#  define LV_ROLLER_DEF_ANIM_TIME     200
+#define LV_ROLLER_DEF_ANIM_TIME     200
 
 /*Number of extra "pages" when the roller is infinite*/
-#  define LV_ROLLER_INF_PAGES         7
+#define LV_ROLLER_INF_PAGES         7
 #endif
 
 /*Slider (dependencies: lv_bar)*/
@@ -729,29 +731,29 @@ typedef void * lv_obj_user_data_t;
 /*Text area (dependencies: lv_label, lv_page)*/
 #define LV_USE_TEXTAREA       1
 #if LV_USE_TEXTAREA != 0
-#  define LV_TEXTAREA_DEF_CURSOR_BLINK_TIME 400     /*ms*/
-#  define LV_TEXTAREA_DEF_PWD_SHOW_TIME     1500    /*ms*/
+#define LV_TEXTAREA_DEF_CURSOR_BLINK_TIME 400     /*ms*/
+#define LV_TEXTAREA_DEF_PWD_SHOW_TIME     1500    /*ms*/
 #endif
 
 /*Table (dependencies: lv_label)*/
 #define LV_USE_TABLE    1
 #if LV_USE_TABLE
-#  define LV_TABLE_COL_MAX    12
-#  define LV_TABLE_CELL_STYLE_CNT 4
+#define LV_TABLE_COL_MAX    12
+#define LV_TABLE_CELL_STYLE_CNT 4
 #endif
 
 /*Tab (dependencies: lv_page, lv_btnm)*/
 #define LV_USE_TABVIEW      1
-#  if LV_USE_TABVIEW != 0
+#if LV_USE_TABVIEW != 0
 /*Time of slide animation [ms] (0: no animation)*/
-#  define LV_TABVIEW_DEF_ANIM_TIME    300
+#define LV_TABVIEW_DEF_ANIM_TIME    300
 #endif
 
 /*Tileview (dependencies: lv_page) */
 #define LV_USE_TILEVIEW     1
 #if LV_USE_TILEVIEW
 /*Time of slide animation [ms] (0: no animation)*/
-#  define LV_TILEVIEW_DEF_ANIM_TIME   300
+#define LV_TILEVIEW_DEF_ANIM_TIME   300
 #endif
 
 /*Window (dependencies: lv_cont, lv_btn, lv_label, lv_img, lv_page)*/
@@ -762,7 +764,7 @@ typedef void * lv_obj_user_data_t;
  *==================*/
 
 #if defined(_MSC_VER) && !defined(_CRT_SECURE_NO_WARNINGS)    /* Disable warnings for Visual Studio*/
-#  define _CRT_SECURE_NO_WARNINGS
+#define _CRT_SECURE_NO_WARNINGS
 #endif
 
 /*--END OF LV_CONF_H--*/

@@ -69,4 +69,4 @@ children:
         children:
         - {type: Value, value: gfx_display_driver}
 - type: ElementPosition
-  attributes: {x: '296', y: '666', id: gfx_driver_glcd}
+  attributes: {x: '297', y: '664', id: gfx_driver_glcd}

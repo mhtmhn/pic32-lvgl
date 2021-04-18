@@ -158,6 +158,7 @@
       </logicalFolder>
       <itemPath>../src/app_fs.h</itemPath>
       <itemPath>../src/app_lvgl.h</itemPath>
+      <itemPath>../src/common.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -888,7 +889,7 @@
         <targetDevice>PIC32MZ2064DAA288</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>noID</platformTool>
+        <platformTool>ICD4Tool</platformTool>
         <languageToolchain>XC32</languageToolchain>
         <languageToolchainVersion>2.50</languageToolchainVersion>
         <platform>3</platform>
@@ -928,17 +929,17 @@
         <property key="additional-warnings" value="true"/>
         <property key="addresss-attribute-use" value="false"/>
         <property key="enable-app-io" value="false"/>
-        <property key="enable-omit-frame-pointer" value="false"/>
+        <property key="enable-omit-frame-pointer" value="true"/>
         <property key="enable-symbols" value="true"/>
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/mzda_sk_extddr_meb2_tm4301b;../src/config/mzda_sk_extddr_meb2_tm4301b/system/fs/fat_fs/file_system;../src/config/mzda_sk_extddr_meb2_tm4301b/system/fs/fat_fs/hardware_access;../src/packs/PIC32MZ2064DAA288_DFP;..\..\..\lv_examples;..\..\..\lv_fs_if;..\..\..\lvgl"/>
+                  value="../../../lv_examples;../../../lv_fs_if;../../../lvgl;../src;../src/config/mzda_sk_extddr_meb2_tm4301b;../src/config/mzda_sk_extddr_meb2_tm4301b/system/fs/fat_fs/file_system;../src/config/mzda_sk_extddr_meb2_tm4301b/system/fs/fat_fs/hardware_access;../src/packs/PIC32MZ2064DAA288_DFP"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
         <property key="make-warnings-into-errors" value="false"/>
-        <property key="optimization-level" value=""/>
+        <property key="optimization-level" value="-Os"/>
         <property key="place-data-into-section" value="false"/>
         <property key="post-instruction-scheduling" value="default"/>
         <property key="pre-instruction-scheduling" value="default"/>
@@ -1029,7 +1030,7 @@
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/mzda_sk_extddr_meb2_tm4301b;../src/config/mzda_sk_extddr_meb2_tm4301b/system/fs/fat_fs/file_system;../src/config/mzda_sk_extddr_meb2_tm4301b/system/fs/fat_fs/hardware_access;../src/packs/PIC32MZ2064DAA288_DFP;../../../lvgl;../../../lv_fs_if;../../../lv_examples"/>
+                  value="../../../lv_examples;../../../lv_fs_if;../../../lvgl;../src;../src/config/mzda_sk_extddr_meb2_tm4301b;../src/config/mzda_sk_extddr_meb2_tm4301b/system/fs/fat_fs/file_system;../src/config/mzda_sk_extddr_meb2_tm4301b/system/fs/fat_fs/hardware_access;../src/packs/PIC32MZ2064DAA288_DFP"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -1164,7 +1165,7 @@
         <property key="programoptions.pgdconfig" value="pull down"/>
         <property key="programoptions.pgdresistor.value" value="4.7"/>
         <property key="programoptions.pgmentry.voltage" value="low"/>
-        <property key="programoptions.pgmspeed" value="Med"/>
+        <property key="programoptions.pgmspeed" value="Max"/>
         <property key="programoptions.preservedataflash" value="false"/>
         <property key="programoptions.preservedataflash.ranges"
                   value="${memories.dataflash.default}"/>

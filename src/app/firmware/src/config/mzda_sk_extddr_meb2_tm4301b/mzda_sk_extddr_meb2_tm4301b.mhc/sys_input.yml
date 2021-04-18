@@ -10,7 +10,7 @@ children:
     - type: Values
       children:
       - type: User
-        attributes: {value: '60'}
+        attributes: {value: '16'}
   - type: Integer
     attributes: {id: MaxListeners}
     children:
