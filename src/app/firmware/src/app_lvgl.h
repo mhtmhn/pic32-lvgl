@@ -32,6 +32,7 @@ typedef enum {
 } APP_LVGL_STATES;
 
 /* Application variable data type */
+__ALIGNED(4)
 typedef struct {
     /* The application's current state */
     APP_LVGL_STATES state;
