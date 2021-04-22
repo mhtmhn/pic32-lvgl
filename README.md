@@ -1,5 +1,5 @@
 # pic32-lvgl
-LVGL port for PIC32MZ DA
+[LVGL](https://lvgl.io/)  port for PIC32MZ DA
 
 ****Requirements:****
  1. PIC32MZ DA Starter Kit ([DM320008](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320008)) 
