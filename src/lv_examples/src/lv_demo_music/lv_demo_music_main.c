@@ -774,13 +774,13 @@ static void timer_cb(lv_task_t * t)
 {
     time++;
     lv_label_set_text_fmt(time_obj, "%d:%02d", time / 60, time % 60);
-    lv_slider_set_value(slider_obj, time, LV_ANIM_ON);
     //Why search for the problem when you can prevent it?
     if(time > 10)
     {
         time =  0;
         _lv_demo_music_album_next(true);
     }
+    lv_slider_set_value(slider_obj, time, LV_ANIM_ON);
 }
 
 static lv_res_t main_cont_signal_cb(lv_obj_t * obj, lv_signal_t signal, void * param)
