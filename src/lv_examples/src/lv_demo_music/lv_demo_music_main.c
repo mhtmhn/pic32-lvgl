@@ -109,7 +109,7 @@ lv_obj_t * _lv_demo_music_main_create(lv_obj_t * parent)
     lv_obj_set_style_local_border_width(main_cont, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, 0);
     lv_obj_add_protect(main_cont, LV_PROTECT_PRESS_LOST);
     lv_obj_set_drag(main_cont, true);
-    lv_obj_set_drag_throw(main_cont, true);
+    lv_obj_set_drag_throw(main_cont, false);
     lv_obj_set_drag_dir(main_cont, LV_DRAG_DIR_VER);
     lv_obj_set_y(main_cont, -15);
     ancestor_signal_cb = lv_obj_get_signal_cb(main_cont);
@@ -789,55 +789,34 @@ static lv_res_t main_cont_signal_cb(lv_obj_t * obj, lv_signal_t signal, void * p
     res = ancestor_signal_cb(obj, signal, param);
     if(res != LV_RES_OK) return res;
 
-    if(signal == LV_SIGNAL_DRAG_THROW_BEGIN) {
+    if(signal == LV_SIGNAL_DRAG_BEGIN) {
         lv_coord_t y = lv_obj_get_y(obj);
-        lv_indev_t * indev = lv_indev_get_act();
-        lv_point_t vect;
-        lv_indev_get_vect(indev, &vect);
-        lv_coord_t y_predict = 0;
-
-        while(vect.y != 0) {
-            y_predict += vect.y;
-            vect.y = vect.y * (100 - LV_INDEV_DEF_DRAG_THROW) / 100;
-        }
-
+        static bool toggle = false;
         lv_anim_t a;
+        lv_anim_path_t path;
+        
         lv_anim_init(&a);
         lv_anim_set_var(&a, obj);
         lv_anim_set_exec_cb(&a, (lv_anim_exec_xcb_t) lv_obj_set_y);
-        lv_anim_set_time(&a, 200);
+        lv_anim_set_time(&a, 300);
+        
         lv_indev_finish_drag(lv_indev_get_act());
+        lv_indev_wait_release(lv_indev_get_act());
 
-#if LV_DEMO_MUSIC_SQUARE
-        if(y_predict < -LV_VER_RES / 3) y_predict = -LV_VER_RES / 3;
-        if(y_predict > LV_VER_RES / 3) y_predict = LV_VER_RES / 3;
-        int page = (y + y_predict - LV_VER_RES / 2) / LV_VER_RES;
-        if(page > 0) page = 0;
-        if(page < -2) page = -2;
-        if(page == 0) {
+        if(toggle) {
             lv_anim_set_values(&a, y, -15);
-        }
-        else if(page == -1) {
-            lv_anim_set_values(&a, y, -LV_VER_RES - 7);
+            lv_anim_path_set_cb(&path, lv_anim_path_bounce);
+            toggle = false;
         } else {
             lv_anim_set_values(&a, y, -lv_obj_get_height(obj) + LV_DEMO_LIST_CTRL_OVERLAP);
+            lv_anim_path_set_cb(&path, lv_anim_path_ease_out);
+            toggle = true;
         }
-#else
-        if(y + y_predict > -LV_VER_RES / 2) {
-            lv_anim_set_values(&a, y, -15);
-        } else {
-            lv_anim_set_values(&a, y, -lv_obj_get_height(obj) + LV_DEMO_LIST_CTRL_OVERLAP);
-        }
-#endif
+        
+        lv_anim_set_path(&a, &path);
         lv_anim_start(&a);
     }
-    else if(signal == LV_SIGNAL_COORD_CHG) {
-        lv_coord_t y = lv_obj_get_y(obj);
-        lv_coord_t h = lv_obj_get_height(obj);
-        if(y > -15) lv_obj_set_y(obj, -15);
-        if(obj->coords.y2 < LV_DEMO_LIST_CTRL_OVERLAP) lv_obj_set_y(obj, -h + LV_DEMO_LIST_CTRL_OVERLAP);
-    }
-
+    
     return LV_RES_OK;
 }
 
