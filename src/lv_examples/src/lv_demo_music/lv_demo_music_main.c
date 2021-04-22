@@ -298,11 +298,24 @@ lv_obj_t * _lv_demo_music_main_create(lv_obj_t * parent)
     lv_obj_set_style_local_text_color(handle_label, LV_LABEL_PART_MAIN, LV_STATE_DEFAULT, lv_color_hex(0x8a86b8));
     lv_obj_align(handle_label, NULL, LV_ALIGN_IN_BOTTOM_MID, 0, -35);
 
-    lv_obj_t * handle_rect = lv_obj_create(main_cont, NULL);
-    lv_obj_set_size(handle_rect, 20, 2);
-    lv_obj_align(handle_rect, NULL, LV_ALIGN_IN_BOTTOM_MID, 0, -30);
-    lv_obj_set_style_local_bg_color(handle_rect, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, lv_color_hex(0x8a86b8));
-    lv_obj_set_style_local_border_width(handle_rect, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, 0);
+    /* Draw three parallel lines to hint that the container can be dragged */
+    lv_obj_t * handle_rect1 = lv_obj_create(main_cont, NULL);
+    lv_obj_set_size(handle_rect1, 20, 2);
+    lv_obj_align(handle_rect1, NULL, LV_ALIGN_IN_BOTTOM_MID, 0, -30);
+    lv_obj_set_style_local_bg_color(handle_rect1, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, lv_color_hex(0x8a86b8));
+    lv_obj_set_style_local_border_width(handle_rect1, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, 0);
+    
+    lv_obj_t * handle_rect2 = lv_obj_create(main_cont, NULL);
+    lv_obj_set_size(handle_rect2, 20, 2);
+    lv_obj_align(handle_rect2, NULL, LV_ALIGN_IN_BOTTOM_MID, 0, -26);
+    lv_obj_set_style_local_bg_color(handle_rect2, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, lv_color_hex(0x8a86b8));
+    lv_obj_set_style_local_border_width(handle_rect2, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, 0);
+    
+    lv_obj_t * handle_rect3 = lv_obj_create(main_cont, NULL);
+    lv_obj_set_size(handle_rect3, 20, 2);
+    lv_obj_align(handle_rect3, NULL, LV_ALIGN_IN_BOTTOM_MID, 0, -22);
+    lv_obj_set_style_local_bg_color(handle_rect3, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, lv_color_hex(0x8a86b8));
+    lv_obj_set_style_local_border_width(handle_rect3, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, 0);
 
     time_task = lv_task_create(timer_cb, 1000, LV_TASK_PRIO_OFF, NULL);
 
@@ -339,7 +352,9 @@ lv_obj_t * _lv_demo_music_main_create(lv_obj_t * parent)
     lv_obj_fade_in(icon_box, 1000, INTRO_TIME + 1000);
     lv_obj_fade_in(ctrl_box, 1000, INTRO_TIME + 1000);
     lv_obj_fade_in(handle_label, 1000, INTRO_TIME + 1000);
-    lv_obj_fade_in(handle_rect, 1000, INTRO_TIME + 1000);
+    lv_obj_fade_in(handle_rect1, 1000, INTRO_TIME + 1000);
+    lv_obj_fade_in(handle_rect2, 1000, INTRO_TIME + 1000);
+    lv_obj_fade_in(handle_rect3, 1000, INTRO_TIME + 1000);
     lv_obj_fade_in(album_img_obj, 800, INTRO_TIME + 1000);
     lv_obj_fade_in(spectrum_obj, 0, INTRO_TIME);
 
