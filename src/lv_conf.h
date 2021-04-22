@@ -104,7 +104,7 @@ typedef int16_t lv_coord_t;
 
 /* Use the standard memcpy and memset instead of LVGL's own functions.
  * The standard functions might or might not be faster depending on their implementation. */
-#define LV_MEMCPY_MEMSET_STD    0
+#define LV_MEMCPY_MEMSET_STD    1
 
 /* Garbage Collector settings
  * Used if lvgl is binded to higher level language and the memory is managed by that language */
@@ -274,18 +274,18 @@ typedef void * lv_img_decoder_user_data_t;
 #define LV_ATTRIBUTE_FLUSH_READY
 
 /* Required alignment size for buffers */
-#define LV_ATTRIBUTE_MEM_ALIGN_SIZE
+#define LV_ATTRIBUTE_MEM_ALIGN_SIZE 32
 
 /* With size optimization (-Os) the compiler might not align data to
  * 4 or 8 byte boundary. Some HW may need even 32 or 64 bytes.
  * This alignment will be explicitly applied where needed.
  * LV_ATTRIBUTE_MEM_ALIGN_SIZE should be used to specify required align size.
  * E.g. __attribute__((aligned(LV_ATTRIBUTE_MEM_ALIGN_SIZE))) */
-#define LV_ATTRIBUTE_MEM_ALIGN __ALIGNED(4)
+#define LV_ATTRIBUTE_MEM_ALIGN __ALIGNED(LV_ATTRIBUTE_MEM_ALIGN_SIZE)
 
 /* Attribute to mark large constant arrays for example
  * font's bitmaps */
-#define LV_ATTRIBUTE_LARGE_CONST const
+#define LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_MEM_ALIGN const
 
 /* Prefix performance critical functions to place them into a faster memory (e.g RAM)
  * Uses 15-20 kB extra memory */
@@ -301,7 +301,7 @@ typedef void * lv_img_decoder_user_data_t;
 
 /* Prefix variables that are used in GPU accelerated operations, often these need to be
  * placed in RAM sections that are DMA accessible */
-#define LV_ATTRIBUTE_DMA __COHERENT
+#define LV_ATTRIBUTE_DMA
 
 /*===================
  *  HAL settings
