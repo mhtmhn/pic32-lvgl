@@ -474,7 +474,7 @@ static void track_load(uint32_t id)
     lv_label_set_text(artist_obj, _lv_demo_music_get_artist(track_id));
     lv_label_set_text(genre_obj, _lv_demo_music_get_genre(track_id));
 
-    lv_obj_fade_out(album_img_obj, 500, 0);
+    lv_obj_fade_out(album_img_obj, 100, 0);
 
     lv_anim_path_t path;
     lv_anim_path_init(&path);
@@ -487,9 +487,9 @@ static void track_load(uint32_t id)
     lv_anim_set_path(&a, &path);
 #if LV_DEMO_MUSIC_LANDSCAPE
     if(next) {
-        lv_anim_set_values(&a, lv_obj_get_x(album_img_obj), lv_obj_get_x(album_img_obj) - LV_HOR_RES / 7);
+        lv_anim_set_values(&a, lv_obj_get_x(album_img_obj), lv_obj_get_x(album_img_obj) - LV_HOR_RES / 9);
     } else {
-        lv_anim_set_values(&a, lv_obj_get_x(album_img_obj), lv_obj_get_x(album_img_obj) + LV_HOR_RES / 7);
+        lv_anim_set_values(&a, lv_obj_get_x(album_img_obj), lv_obj_get_x(album_img_obj) + LV_HOR_RES / 9);
     }
 #else
     if(next) {
@@ -502,7 +502,7 @@ static void track_load(uint32_t id)
     lv_anim_set_ready_cb(&a, lv_obj_del_anim_ready_cb);
     lv_anim_start(&a);
 
-    lv_anim_path_set_cb(&path, lv_anim_path_linear);
+    lv_anim_path_set_cb(&path, lv_anim_path_ease_out);
     lv_anim_set_path(&a, &path);
     lv_anim_set_var(&a, album_img_obj);
     lv_anim_set_time(&a, 500);

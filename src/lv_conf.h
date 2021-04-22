@@ -184,7 +184,7 @@ typedef void * lv_anim_user_data_t;
 #define LV_USE_OPA_SCALE        1
 
 /* 1: Use image zoom and rotation*/
-#define LV_USE_IMG_TRANSFORM    1
+#define LV_USE_IMG_TRANSFORM    0
 
 /* 1: Enable object groups (for keyboard/encoder navigation) */
 #define LV_USE_GROUP            1
